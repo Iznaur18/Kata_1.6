@@ -1,0 +1,101 @@
+.repair {
+  margin-top: 50px;
+  padding-top: 16px;
+}
+
+.repair__header {
+  margin-bottom: 40px;
+  p {
+    font-size: 16px;
+    font-weight: 100;
+    color: $color-gray;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    margin: 0;
+  }
+}
+
+.repair__item {
+  width: 240px;
+  height: 160px;
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  @include respond(phone) {
+    width: inherit;
+  }
+  cursor: pointer;
+  div {
+    p {
+      padding: 16px;
+      font-size: 18px;
+    }
+  }
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 8px;
+}
+
+.repair__btn__show {
+  display: none;
+  background: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  @include respond(tab-port) {
+    display: inline-block;
+  }
+  @include respond(tab-land) {
+    display: inline-block;
+  }
+}
+
+.repair__btn__arrow {
+  display: none;
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include respond(tab-port) {
+    display: inline-block;
+  }
+  @include respond(tab-land) {
+    display: inline-block;
+  }
+}
+
+.repair__btn {
+  margin-top: 24px;
+  @include respond(tab-port) {
+    display: flex;
+  }
+}
+
+.repair__img {
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+@include respond(tab-port) {
+  .repair__items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    gap: 16px;
+    overflow: hidden;
+  }
+}
+
+@include respond(tab-land) {
+  .repair__items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    gap: 16px;
+    overflow: hidden;
+  }
+}

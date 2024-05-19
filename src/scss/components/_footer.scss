@@ -1,0 +1,25 @@
+.footer {
+  margin-top: 50px;
+  margin-bottom: 4px;
+}
+
+.footer__body {
+  margin: 0 auto;
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: $color-gray;
+  @include respond(phone) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  div {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,155 @@
+.prices {
+  margin-top: 50px;
+  padding-top: 16px;
+}
+
+.prices__header {
+  margin-bottom: 40px;
+  p {
+    font-size: 16px;
+    font-weight: 100;
+    color: $color-gray;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    margin: 0;
+  }
+}
+
+.prices__items {
+  display: flex;
+  flex-direction: row;
+  border-radius: 6px;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+}
+
+.prices__item {
+  width: 260px;
+  height: 200px;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  display: grid;
+  gap: 24px;
+  align-items: center;
+  padding: 16px;
+  background-color: $color-white;
+  cursor: pointer;
+  &:nth-child(1) {
+    display: none;
+  }
+  @include respond(phone) {
+    width: initial;
+    height: initial;
+    grid-template-columns: 3fr 1fr 1fr auto;
+    &:nth-child(1) {
+      display: grid;
+      color: $color-gray;
+      background-color: inherit;
+      border: none;
+      cursor: default;
+      button {
+        visibility: hidden;
+      }
+    }
+  }
+  // =====================
+  p {
+    font-size: 16px;
+    span {
+      display: block;
+      margin-bottom: 4px;
+      color: $color-gray;
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+  // =====================
+  button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 12px;
+    width: 120px;
+    border: none;
+    border-radius: 16px;
+    background-color: $color-cerise;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color-white;
+    cursor: pointer;
+  }
+  // =====================
+}
+
+.prices__item__info {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 8px;
+}
+
+.prices__btn__show {
+  display: none;
+  background: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  @include respond(tab-port) {
+    display: inline-block;
+  }
+  @include respond(tab-land) {
+    display: inline-block;
+  }
+}
+
+.prices__btn__arrow {
+  display: none;
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include respond(tab-port) {
+    display: inline-block;
+  }
+  @include respond(tab-land) {
+    display: inline-block;
+  }
+}
+
+.prices__btn {
+  margin-top: 24px;
+  @include respond(tab-port) {
+    display: flex;
+  }
+}
+
+.prices__img {
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.prices__nextBtn {
+  width: fit-content;
+}
+
+.prices__desc {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  max-width: 420px;
+  color: $color-black;
+  font-size: 16px;
+}
+
+.prices__commerce {
+  font-size: 18px;
+  font-weight: bold;
+}

@@ -1,0 +1,133 @@
+.services__title {
+  font-weight: bold;
+  font-size: 28px;
+  color: $color-black;
+}
+
+.services__container {
+  display: flex;
+  align-items: center;
+  @include respond(tab-land) {
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  span {
+    position: absolute;
+    left: 0;
+    height: 40px;
+    width: 5px;
+    background-color: $color-blue;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.services__items {
+  display: none;
+  @include respond(tab-land) {
+    display: block;
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+}
+
+.services__item {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+}
+
+.services__item img {
+  margin-left: 8px;
+}
+
+.services__scroll {
+  margin: 24px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.services__scroll__items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  li {
+    padding: 8px 16px;
+    margin-right: calc(28px + 8%);
+    font-size: 16px;
+    color: $color-gray;
+    border: 1px solid #41f6d800;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-white;
+      border-radius: 5px;
+      border: 1px solid $color-blue;
+    }
+  }
+}
+
+.services__description {
+  font-size: 14px;
+  line-height: 18px;
+  @include respond(phone) {
+    display: flex;
+  }
+}
+
+.services__description__text {
+  color: $color-black;
+  @include respond(phone) {
+    width: 60%;
+    margin-right: 36px;
+  }
+}
+
+.services__description__wrapper {
+  margin: 16px 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.services__description__chapter-2 {
+  display: none;
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.services__description__chapter-3 {
+  display: none;
+  @include respond(tab-land) {
+    display: block;
+  }
+}
+
+.services__description__arrows {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services__description__more {
+  font-weight: 700;
+}
+
+.picture {
+  width: 100%;
+}
+
+/* Media ===================== */
+
+@include respond(phone) {
+  .leftSide {
+    width: 50%;
+  }
+  .rightSide {
+    width: 50%;
+  }
+}

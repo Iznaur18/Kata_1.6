@@ -1,0 +1,101 @@
+.brand {
+  margin-top: 50px;
+  padding-top: 16px;
+}
+
+.brand__header {
+  margin-bottom: 40px;
+  p {
+    font-size: 16px;
+    font-weight: 100;
+    color: $color-gray;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    margin: 0;
+  }
+}
+
+.brand__items .brand__item {
+  width: 240px;
+  height: 72px;
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  @include respond(phone) {
+    width: inherit;
+  }
+  cursor: pointer;
+  div {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: fit-content;
+    }
+  }
+}
+
+.swiper-repair {
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 8px;
+}
+
+.brand__btn__show {
+  display: none;
+  background: none;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  @include respond(tab-port) {
+    display: inline-block;
+  }
+  @include respond(tab-land) {
+    display: inline-block;
+  }
+}
+
+.brand__btn__arrow {
+  display: none;
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include respond(tab-port) {
+    display: inline-block;
+  }
+}
+
+.brand__btn {
+  margin-top: 24px;
+}
+
+@include respond(tab-port) {
+  .brand__items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    gap: 16px;
+    overflow: hidden;
+  }
+  .brand__btn {
+    display: flex;
+  }
+}
+
+@include respond(tab-land) {
+  .brand__items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    gap: 16px;
+    overflow: hidden;
+  }
+  .brand__btn__arrow {
+    display: inline-block;
+  }
+}
